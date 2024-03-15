@@ -4,15 +4,10 @@ const router = express.Router();
 
 const { auth, ctrlWrapper, upload } = require("../../middlewares");
 
-// const {
-//   joiSubscriptionSchema,
-//   joiSchemaVerifyEmail,
-// } = require("../../models/user");
-
 const { files: ctrl } = require("../../controllers");
 
 
-router.patch(
+router.post(
   "/",
   auth,
   upload.array('files'),
